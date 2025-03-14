@@ -40,12 +40,19 @@ git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebro
 git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
+# 自用额外添加的
+git clone --depth=1 https://github.com/zxl78585/luci-app-autoreboot package/luci-app-autoreboot
+git clone --depth=1 https://github.com/torguardvpn/luci-app-easymesh package/luci-app-easymesh
+git clone --depth=1 https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
+git clone --depth=1 https://github.com/AoThen/luci-app-ramfree package/luci-app-ramfree
+git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper package/luci-app-nat6-helper
+
 # 科学上网插件
 #git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
-#git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
 # Themes
 git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
@@ -58,10 +65,10 @@ git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial l
 cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # 晶晨宝盒
-git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
-sed -i "s|firmware_repo.*|firmware_repo 'https://github.com/haiibo/OpenWrt'|g" package/luci-app-amlogic/root/etc/config/amlogic
+# git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
+# sed -i "s|firmware_repo.*|firmware_repo 'https://github.com/haiibo/OpenWrt'|g" package/luci-app-amlogic/root/etc/config/amlogic
 # sed -i "s|kernel_path.*|kernel_path 'https://github.com/ophub/kernel'|g" package/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
+# sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
 
 # SmartDNS
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
