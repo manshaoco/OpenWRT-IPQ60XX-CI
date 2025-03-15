@@ -44,7 +44,6 @@ git clone --depth=1 https://github.com/zxl78585/luci-app-autoreboot package/luci
 git clone --depth=1 https://github.com/torguardvpn/luci-app-easymesh package/luci-app-easymesh
 git clone --depth=1 https://github.com/zzsj0928/luci-app-pushbot package/luci-app-pushbot
 git clone --depth=1 https://github.com/AoThen/luci-app-ramfree package/luci-app-ramfree
-git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper package/luci-app-nat6-helper
 
 # 代理插件
 git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
